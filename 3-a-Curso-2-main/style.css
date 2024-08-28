@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital@0;1&display=swap');
+:root{ /*raiz no css  - definições das variaveis*/
+    --branco: rgb(202, 168, 168);
+    --cor-de-fundo: #688eb8;
+    --fundo-senha: #5d7794;
+    --fundo-texto: #4e6c8d;
+    --borda: #050505;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+
+}
+*{ /* Faz com que as configuração definidas dentro sejam aplicadas a pagina toda*/
+    font-weight: 500; /*peso da fonte*/
+}
+body{ /*configurações aplicadas a toda a pagina*/
+    color: var(--branco); /*cor da fonte*/
+    background-color: var(--cor-de-fundo); /*cor do fundo*/
+    font-family: var(--roboto); /*tipo da fonte*/
+
+}
+.titulo-principal{ /*configurações do titulo principal*/
+    font-family: var(--roboto-mono); /*tipo da fonte*/
+    font-size: 42px; /*tamanho da fonte*/
+
+}
+.titulo-secundario{/*configurações do titulo secundario*/
+    font-size: 34px; /*tamanho da fonte*/
+}
+.conteudo-titulo{/*configurações do conteudo dentro da classe titulo*/
+    text-align: center; /*alinhamneto do texto ao centro*/
+    margin-top: 90px; /*adiciona margem superior*/
+}
+.conteudo-senha{ /*configurações do conteudo dentro de senha*/
+    margin-top: 90px; /*adiciona margem superior*/
+    background: var(--fundo-senha); /*define o fundo*/
+    padding: 34px; /*espaçamento*/
+    border-bottom: 12px solid var(--borda); /*cria uma borda inferior*/
+}
+
+#campo-senha{ /*definições dentro do campo senha */
+    background-color: var(--fundo-senha); /*cor do fundo*/
+    border: none; /*bordas */
+    color: var(--branco); /*cor da fonte*/
+    font-family: var(--roboto-mono); /*tipo da fonte*/
+    font-size: 50px; /*tamanho da fonte*/
+    width: 80%; /*largura do campo*/
+} 
+#campo-senha:focus{ /*definições caso o campo de senha esteja em foco - com o mouse em cima*/
+    outline: none; 
+}
+.conteudo{ /*definiçoes do conteudo*/
+    max-width: 1600px; /*largura maxima*/
+    margin: 0   auto; /*margens*/
+}
+.parametro{ /* parametros da senha */
+    background-color: var(--fundo-texto);/*cor do fundo*/ 
+    border: 4px solid var(--borda); /*bordas */
+    margin-top: 42px; /*margem superior*/
+    padding: 34px; /*espaçamento*/
+}
+.parametro-titulo{
+    font-family: var(--roboto-mono);
+    font-size: 38px;
+}
+.parametro-senha__titulo{
+    font-size:34px;
+}
+.parametro-coluna__senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parametro-senha{
+    width: 60%;
+    margin: 0 auto;
+}
+.parametro-senha-botoes{ /*configuraçoes gerais para os botoes de numeros de caracteres da senha*/
+    display: flex; /*alinhamento em linha*/
+    justify-content: center; /*centraliza os itens*/
+}
+.parametro-senha__botao{ /*configurações para os botoes */
+    background-color: var(--fundo-texto); /*define com de fundo dos botoes*/
+    color: var(--branco); /*define cor do texto*/
+    border: 4px solid var(--borda); /*define bordas dos botoes*/
+    padding: 34px; /*espaçamento*/
+    font-size: 34px; /*tamanho da fonte*/
+    cursor: pointer; /*altera o cursos para a maosinha*/
+}
+.parametro-senha__texto{ /*configurações para o texto no meio dos botoes*/
+    padding: 34px; /*adiciona espaçamento*/
+    border-top: 4px solid var(--borda);/*coloca uma borda no topo*/
+    border-bottom: 4px solid var(--borda); /*coloca uma borda embaixo*/
+    margin: 0; /*serve para alinhar o texto aos botoes*/
+    font-size: 34px;
+}
+label{
+    font-size: 30px;
+}
+
+.checkbox{
+    width: 30px;
+    height: 30px;
+    cursor: pointer; /*altera o cursos para a maosinha*/
+}
+.barra{
+    background-color: var(--fundo-senha);
+    height: 40px;
+    width: 100%;
+}
+.forca{
+    height: 40px;
+    position: relative;
+    bottom: 40px;
+}
+
+.fraca{
+    width: 35%;
+    background-color: #ff001e; 
+}
+.media{
+    background-color: #fff700;
+    width: 60%;
+}
+.forte{
+    background-color: #0beb7e;
+    width: 100%;
+}
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between; /*cria o espaço entre os textos na parte da forca da senha*/
+}
+@media screen and (min-width: 868px) { /*redefine as configuraçoes com base na tela que a pagina sera exibida*/
+    .parametro-coluna__senha{
+        flex-direction: row;
+    }
+}
